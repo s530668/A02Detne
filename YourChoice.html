@@ -71,6 +71,9 @@
                                <option name="items" value="20">pizza</option>
                                <option name="items" value="25">fries</option>
                              </select><br /><br />
+                             <label for="quantity">Quantity</label>
+                             <input type="number" id="quantItem" name="quantity"/> 
+                             <br /><br />
                               <label>ENTER THE DRINKS  :  </LABEL><select name="drinks" id="drinkItem" >
                                     <!-- <label>ENTER THE DRINKS  :  </LABEL><select name="drinks" id="drinkItem" onchange="calculatePrice();">                                             -->
                                <option name="drinks1" value='10' id="c1" >Coke</option>
@@ -78,6 +81,9 @@
                                <option name="drinks3" value="15">Pepsi</option>
                                <option name="drinks4" value="20">WaterBottle</option>
                                </select><br /><br />
+                               <label for="quantit">Quantity</label>
+                               <input type="number" id="quantDrink" name="quantit"/> 
+                               <br /><br />
                                <input type="button" id="button" name="SUBMIT" value="SUBMIT" id="#btn"onClick="showData()"/><br /><br />
                                <label>Pay Now  :  </LABEL><input type="text" name="pay now" value="" id="p1"/><br /><br />
                               </form>
@@ -97,6 +103,7 @@
                    //alert();
                    //alert($( "#foodItem option:selected" ).text());
                    var i1= $( "#foodItem" ).val();
+                   var q1= $( "#quantItem" ).val();
                    /*var i2=15
                    var i3=20;
                    var i4=25;//items price
@@ -104,15 +111,17 @@
                    var j=[Coke,LimeDrink,Pepsi,WaterBottle]; */
 
                    var c1= $( "#drinkItem" ).val();//drinks price
+                   var q2= $( "#quantDrink" ).val();
+                   
                  /*  var c2=10;
                    var c3=15;
                    var c4=20; */
-                   add(i1,c1);
+                   add(i1,q1,c1,q2);
                    
                }
-               function add(i1, c1)
+               function add(i1,q1, c1,q2)
                {
-                   var c=Number(i1) + Number(c1);
+                   var c=Number(i1)*q1 + Number(c1)*q2;
                    //document.getElementById("text").innerHTML()=add.val();
                    //$("#p1").val(0);
                    $("#p1").val(c);

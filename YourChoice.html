@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+             <title>Your Choice</title>
+            
+   
+             <meta name="description" content="">
+             <meta name="viewport" content="width=device-width, initial-scale=1">
+             <link rel="apple-touch-icon" href="apple-touch-icon.png">
+     
+             <link rel="stylesheet" href="css/bootstrap.min.css">
+             
+             <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+             <link rel="stylesheet" href="css/main.css">
+             <link rel="stylesheet" href="index.css" type="text/css">
+           
+             <script
+             src="https://code.jquery.com/jquery-3.2.1.min.js"
+             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+             crossorigin="anonymous"></script>
+             <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+         </head>
+         <body>
+             <!--[if lt IE 8]>
+                 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+             <![endif]-->
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+           <div class="container">
+             <div class="navbar-header">
+             <!--  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               <!--</button>-->
+               <a class="navbar-brand" href="#">Sangeetha Detne</a><br/>
+             </div>
+             <div class="topnav">
+               <a href=""></a>
+               <a href=""></a>
+               <a class="active" href="index.html" target="_blank">Home</a>
+               <a href="YourChoice.html" target="_blank">Your Choice
+               </a>
+               <a href="Contact.html" target="_blank">Contact</a>
+             </div>
+         </div>
+        </nav>
+
+     <link rel="stylesheet" href="Yourchoice.css" type="text/css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+        <body>
+            <div class="container1">
+                <div class="row">
+                <h1>BARBEQUE Restaurant</h1>
+            </div>
+        </div>
+            <div class="conatiner2">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5">
+                            <form action="/action_page.php">
+                                <label>ENTER THE ITEM  :  </LABEL><select name="items" id="foodItem" >
+                                        <!-- <label>ENTER THE ITEM  :  </LABEL><select name="items" id="foodItem" onchange="calculatePrice();"> -->
+                                                
+                               <option name="items" value='10' >Sandwich</option>
+                               <option name="items" value="15" >Burger</option>
+                               <option name="items" value="20">pizza</option>
+                               <option name="items" value="25">fries</option>
+                             </select><br /><br />
+                              <label>ENTER THE DRINKS  :  </LABEL><select name="drinks" id="drinkItem" >
+                                    <!-- <label>ENTER THE DRINKS  :  </LABEL><select name="drinks" id="drinkItem" onchange="calculatePrice();">                                             -->
+                               <option name="drinks1" value='10' id="c1" >Coke</option>
+                               <option name="drinks2" value="10">LimeDrink</option>
+                               <option name="drinks3" value="15">Pepsi</option>
+                               <option name="drinks4" value="20">WaterBottle</option>
+                               </select><br /><br />
+                               <input type="button" id="button" name="SUBMIT" value="SUBMIT" id="#btn"onClick="showData()"/><br /><br />
+                               <label>Pay Now  :  </LABEL><input type="text" name="pay now" value="" id="p1"/><br /><br />
+                              </form>
+           
+                  </div>  
+                <div class="col-md-3"></div>
+            </div> 
+        `</div>
+
+        <script>
+                function showData()
+               {
+                   
+                   //--window.alert("clicked button");
+                   //var sandwich=$("#sandwich").html("10");
+                   //window.alert("sandwich value:"+$("#sandwich").html("10"));
+                   //alert();
+                   //alert($( "#foodItem option:selected" ).text());
+                   var i1= $( "#foodItem" ).val();
+                   /*var i2=15
+                   var i3=20;
+                   var i4=25;//items price
+                   var i=[sandwich,Burger,pizza,fries];
+                   var j=[Coke,LimeDrink,Pepsi,WaterBottle]; */
+
+                   var c1= $( "#drinkItem" ).val();//drinks price
+                 /*  var c2=10;
+                   var c3=15;
+                   var c4=20; */
+                   add(i1,c1);
+                   
+               }
+               function add(i1, c1)
+               {
+                   var c=Number(i1) + Number(c1);
+                   //document.getElementById("text").innerHTML()=add.val();
+                   //$("#p1").val(0);
+                   $("#p1").val(c);
+
+               }
+               
+               function calculatePrice(i1, c1) {
+               
+                   var i1 = $( "#foodItem" ).val();
+                   var i2 = $( "#drinkItem" ).val();
+                   
+                   add(i1,i2);
+                   
+               }
+            </script>
+        </body>
+</html>

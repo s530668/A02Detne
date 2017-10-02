@@ -1,0 +1,28 @@
+
+ h1   {color: red;text-align:center;}
+ p    {color: red;
+ }
+   .container1
+   {
+    font-size: 50px;
+    background-image:url("billions-of-stars.jpg"); 
+    color:white;
+     padding: 15px 15px;
+     font-family: "Curlz MT";
+   }
+   .conatiner2
+   {
+    background-image:url("cook-366875_1280-750x375.v2.jpg?0.20023576790115238"); 
+    border: 1px solid black;
+    padding: 50px 30px 50px 80px;
+    color:red;
+    height:500px;
+    background-repeat: repeat-x;
+  }
+  #btn,.opt{
+    color:black
+
+  }
+
+  
+   
